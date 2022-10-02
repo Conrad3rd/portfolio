@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/stylesheets/application.css">
@@ -12,14 +16,38 @@
   <div class="container">
 
     <div id="s1" class="banner section">
-      <h1>Welcome to c3rd</h1>
+      <a href="#s2"><h1>Welcome to c3rd</h1></a>
     </div>
 
     <div id="s2" class="projects section">
       <h2>Some of my projects</h2>
     </div>
-    
+
   </div>
 
+
+
+  <script>
+    jQuery($ => {
+      // The speed of the scroll in milliseconds
+      const speed = 1000;
+
+      $('a[href*="#"]')
+        .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
+        .unbind('click.smoothScroll')
+        .bind('click.smoothScroll', event => {
+          const targetId = event.currentTarget.getAttribute('href').split('#')[1];
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            event.preventDefault();
+            $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
+          }
+        });
+    });
+  </script>
 </body>
 </html>
+
+
+<!-- https://www.creativejuiz.fr/blog/tutoriels/jquery-effet-smooth-scroll-defilement-fluide -->
