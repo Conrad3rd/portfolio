@@ -1,21 +1,20 @@
-
 #s1 {
-  background-color: red;
-  height: 100vh;
+  background-color: rgb(54, 95, 33);
 }
 
 #s2 {
-  background-color: greenyellow;
-  height: 100vh;
+  background-color: rgb(68, 141, 141);;
 }
 
 .section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  text-align: center;
+  height: 100vh;
 }
 
-
-html {
-  scroll-behavior: smooth !important;
+.headline {
+  width: 100%;
+  text-align: center;
+  position:absolute;
+  bottom:5vh;
 }
