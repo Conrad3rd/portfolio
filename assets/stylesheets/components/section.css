@@ -6,9 +6,6 @@
 .active {
   /* background-color: rgb(103, 103, 103); */
   cursor: alias;
-
-  margin: -2px;
-  padding: -2px;
 }
 
 .active{
@@ -41,7 +38,6 @@
 }
 .nav {
   display: inline;
-  padding: 0px 0px 1px 0px;
 }
 
 .navi {
