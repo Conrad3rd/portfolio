@@ -1,9 +1,17 @@
-#s1 {
-  background-color: rgb(54, 95, 33);
+#s1 {background-color: rgb(54, 95, 33);}
+#s2 {background-color: rgb(68, 141, 141);}
+#s3 {background-color: rgb(29, 73, 81);}
+#s4 {background-color: rgb(160, 162, 94);}
+
+.active {
+  background-color: rgb(103, 103, 103);
+  cursor: alias;
+  font-weight: lighter;
 }
 
-#s2 {
-  background-color: rgb(68, 141, 141);;
+.navsec:hover {
+  background-color: rgb(45, 99, 99);
+
 }
 
 .section {
@@ -12,9 +20,19 @@
   height: 100vh;
 }
 
-.headline {
+.next {
   width: 100%;
   text-align: center;
   position:absolute;
   bottom:5vh;
+  /* background-color: bisque; */
+}
+
+.next span {
+  font-weight: bold;
+  margin: 0px 30px;
+}
+.nav {
+  display: inline;
+  padding: 0px 0px 1px 0px;
 }
