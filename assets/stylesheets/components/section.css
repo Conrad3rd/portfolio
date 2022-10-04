@@ -4,9 +4,16 @@
 #s4 {background-color: rgb(160, 162, 94);}
 
 .active {
-  background-color: rgb(103, 103, 103);
+  /* background-color: rgb(103, 103, 103); */
   cursor: alias;
+
+  margin: -2px;
+  padding: -2px;
+}
+
+.active{
   font-weight: lighter;
+  color: rgb(69, 69, 69);
 }
 
 .navsec:hover {
@@ -35,4 +42,8 @@
 .nav {
   display: inline;
   padding: 0px 0px 1px 0px;
+}
+
+.navi {
+  background-color: rgb(28, 137, 137);
 }
